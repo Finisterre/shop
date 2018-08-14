@@ -1,0 +1,38 @@
+{{>header}}
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>My Portfolio</h1>      
+    <p>Some text that represents "Me"...</p>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Some of my Work</h3><br>
+
+    {{#each products}}
+	{{#if publish}}
+	<div class="col-sm-3">
+      <p>{{name}}</p>
+      <img src="assets/img/{{image}}" class="img-responsive" style="width:100%" alt="{{name}}">
+    </div>
+    	{{/if}}
+	{{/each}}
+
+  
+   
+  
+</div><br>
+
+<script>
+
+$('#home').addClass('active');
+
+</script>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
